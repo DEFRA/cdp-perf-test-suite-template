@@ -19,8 +19,8 @@
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Example HTTP Request">
-          <stringProp name="TestPlan.comments">The test runner provides the name of the environment (e.g. test, perf-test) via the ENVIRONMENT env var for building up urls</stringProp>
-          <stringProp name="HTTPSampler.domain">service-name.${__P(&quot;ENVIRONMENT&quot;)}.cdp-int.defra.cloud</stringProp>
+          <stringProp name="TestPlan.comments">Before running the suite, replace 'service-name' the name/url of the service to test. $env is set to the name of th environment the test is running in.</stringProp>
+          <stringProp name="HTTPSampler.domain">service-name.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>

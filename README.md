@@ -5,16 +5,15 @@ A JMeter based test runner for the CDP Platform.
 - [Licence](#licence)
   - [About the licence](#about-the-licence)
 
-
 ## Build
 
-A github action is supplied to automatically build the test suite every time you commit to the main branch.
-
+Test suites are built automatically by the [.github/workflows/publish.yml](.github/workflows/publish.yml) action whenever a change are committed to the `main` branch.
+A successful build results in a Docker container that is capable of running your tests on the CDP Platform and publishing the results to the CDP Portal.
 
 ## Run
 
 The performance test suites are designed to be run from the CDP Portal.
-
+The CDP Platform runs test suites in much the same way it runs any other service, it takes a docker image and runs it as an ECS task, automatically provisioning infrastructure as required.
 
 ## Licence
 
